@@ -1,3 +1,4 @@
+/****** Base Element Styles ******/
 html {
     box-sizing: border-box;
     font-family: sans-serif;
@@ -17,271 +18,208 @@ body {
     background-color: #fff;
     overflow-x: hidden;
 }
-h1,h2,h3,h4,h5,h6 {
-    margin-top: 0;
-    margin-bottom: .5rem
+*, ::after, ::before {
+    box-sizing: inherit;
 }
 h1 {
     font-size: 2.5rem;
 }
-*, ::after, ::before {
-    box-sizing: inherit;
+h1,h2,h3,h4,h5,h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
 }
-/* Header Section */
-    header {
-        width: 90%;
-        margin: 25vh auto 20vh;
-        text-align: center
-    }
-    header h2 {
-        font-style: italic;
-        padding: 0 10%;
-        font-size: 1.5em; 
-        font-weight: 500; 
-    }
+p, header h2, .inhaler-section ul {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-size: 1.125em;
+    line-height: 1.875em;
+    color: #464646;
+    -webkit-font-smoothing: antialiased
+}
+b, strong {
+    font-weight: bold
+}
+a {
+    color: #464646;
+    cursor: pointer;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
 
-    .special-hr,
-    header h2:before,
-    header h2:after,
-    .credits:before {
-        content: "";
-        width: 60%;
-        margin: 1.5em 20% 1em;
-        height: 0px;
-        display: block;
-        border: 1px solid;
-        border-style: inset;
-    }
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table
+}
 
-    .prompt {
-        font-size: 5em;
-        font-weight: 900;
-    }
+.clearfix:after {
+    clear: both
+}
 
-    .hacked {
-        font-size: 5em;
-        
-    }
+/****** Header Section ******/
+header {
+    width: 90%;
+    margin: 25vh auto 20vh;
+    text-align: center
+}
 
-    .beta {
-        font-size: 3em;
-        font-weight: 100;
-        font-family: 'Saira Condensed', sans-serif;
-        font-weight: 200;
-    }
+/* -- HackED Beta Title -- */
+.prompt {
+    font-size: 5em;
+    font-weight: 900;
+}
+.hacked {
+    font-size: 5em;
+    
+}
+.beta {
+    font-size: 3em;
+    font-weight: 100;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 200;
+}
+.cursor {
+    font-size: 5em;
+    font-weight: 900;
+}
 
-    .cursor {
-        font-size: 5em;
-        font-weight: 900;
-    }
+/* -- Subtitle -- */
+header h2 {
+    font-style: italic;
+    padding: 0 10%;
+    font-size: 1.125em;
+    font-weight: 400;
+}
+header h2:before,
+header h2:after {
+    content: "";
+    width: 60%;
+    margin: 1.5em 20% 1em;
+    height: 0px;
+    display: block;
+    border: 1px solid;
+    border-style: inset;
+}
 
-/* Button Section */
+/****** Button Slideshow ******/
+/* -- Colored Buttons -- */
+.section-title, .bubble {
+    width: 212px;
+    height: 212px;
+    -webkit-border-radius: 106px;
+    -moz-border-radius: 106px;
+    -ms-border-radius: 106px;
+    -o-border-radius: 106px;
+    border-radius: 106px;
+    box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0 1px;
+    margin-top: 2em;
+    margin-left: -10px;
+    color: #fff !important;
+    text-align: center;
+    position: relative;
+    float: left;
+    -webkit-transition: opacity 1s ease;
+    -moz-transition: opacity 1s ease;
+    -ms-transition: opacity 1s ease;
+    -o-transition: opacity 1s ease;
+    transition: opacity 1s ease;
+}
+.section-title h3, .bubble h3 {
+    font-size: 3em;
+    line-height: 0.804em;
+    margin: 0;
+    font-weight: 200; 
+}
+.section-title h3, .bubble h3 {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.bubbleNav {
+    display: table;
+    margin: 0 auto;
+}
+.bubbleNav a.section-title, .bubble.section-title {
+    opacity: 0.4; 
+}
+.bubbleNav a.active-title {
+    opacity: 1; 
+}
+.redback {
+    background: #E06D6F;
+}
+.blueback {
+    background: #80B1F5;
+}
+.greenback {
+    background: #94D3A3;
+}
+.yellowback {
+    background: #F1C37F;
+}
+/* -- Page Slideshow -- */
+.pagesContainer {
+    top: 0;
+    width: 100vw;
+    height: 90vh;
+    margin-top: 5vh;
+}
+.pagesContainer .widePagesContainer {
+    top: 0px;
+    left: 1000vw;
+    width: 400vw;
+    height: 90vh;
+}
+.pagesContainer .widePagesContainer .page {
+    left: -0vw;
+    /* this is the value you gotta change to scroll in JS. */
+    float: left;
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    margin: 0px;
+    overflow-x: scroll;
+    padding: 2em 15vw 2em 15vw;
+}
+.red b, .red strong, 
+.content .red h1, .content .red h2, .content .red h3, .content .red h4 {
+    color: #E06D6F;
+}
+.blue b, .blue strong, 
+.content .blue h1, .content .blue h2, .content .blue h3, .content .blue h4 {
+    color: #80B1F5;
+}
+.green b, .green strong, 
+.content .green h1, .content .green h2, .content .green h3, .content .green h4 {
+    color: #94D3A3;
+}
+.yellow b, .yellow strong, 
+.content .yellow h1, .content .yellow h2, .content .yellow h3, .content .yellow h4 {
+    color: #F1C37F;
+}
 
-    .section-title, .bubble {
-        width: 212px;
-        height: 212px;
-        -webkit-border-radius: 106px;
-        -moz-border-radius: 106px;
-        -ms-border-radius: 106px;
-        -o-border-radius: 106px;
-        border-radius: 106px;
-        box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0 1px;
-        margin-top: 2em;
-        margin-left: -10px;
-        color: #fff !important;
-        text-align: center;
-        position: relative;
-        float: left;
-        -webkit-transition-property: opacity;
-        -moz-transition-property: opacity;
-        -ms-transition-property: opacity;
-        -o-transition-property: opacity;
-        transition-property: opacity;
-        -webkit-transition-duration: 1s;
-        -moz-transition-duration: 1s;
-        -ms-transition-duration: 1s;
-        -o-transition-duration: 1s;
-        transition-duration: 1s
-    }
+/****** FAQ Section ******/
 
-    .section-title h3, .bubble h3 {
-        font-size: 3em;
-        line-height: 0.804em;
-        margin: 0;
-        font-weight: 200; 
-    }
+/****** Sponsors Section ******/
 
-    .section-title h3, .bubble h3 {
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .bubbleNav {
-        display: table;
-        margin: 0 auto;
-    }
-
-    /* Opacities */
-        .bubbleNav a.section-title, .bubble.section-title {
-            opacity: 0.4; 
-        }
-
-        .bubbleNav a.active-title {
-            opacity: 1; 
-        }
-
-/* Pages Section */
-
-    .pagesContainer {
-        top: 0;
-        width: 100vw;
-        height: 90vh;
-        margin-top: 5vh;
-    }
-
-    .pagesContainer .widePagesContainer {
-        top: 0px;
-        left: 1000vw;
-        width: 400vw;
-        height: 90vh;
-    }
-
-    .pagesContainer .widePagesContainer .page {
-        left: -0vw;
-        /* this is the value you gotta change to scroll in JS. */
-        float: left;
-        position: relative;
-        width: 100vw;
-        height: 100%;
-        margin: 0px;
-        overflow-x: scroll;
-        padding: 2em 15vw 2em 15vw;
-    }
-
-/* FAQ Section */
-
-/* Sponsors Section */
-
-/* Theme Elements */
-
-    /*.Background colours */
-        .redback {
-            background: #E06D6F;
-        }
-        .blueback {
-            background: #80B1F5;
-        }
-        .greenback {
-            background: #94D3A3;
-        }
-        .yellowback {
-            background: #F1C37F;
-        }
-
-    /* Text colours */
-        .red b, .red strong, 
-        .content .red h1, .content .red h2, .content .red h3, .content .red h4 {
-            color: #E06D6F;
-        }
-
-        .blue b, .blue strong, 
-        .content .blue h1, .content .blue h2, .content .blue h3, .content .blue h4 {
-            color: #80B1F5;
-        }
-
-        .green b, .green strong, 
-        .content .green h1, .content .green h2, .content .green h3, .content .green h4 {
-            color: #94D3A3;
-        }
-
-        .yellow b, .yellow strong, 
-        .content .yellow h1, .content .yellow h2, .content .yellow h3, .content .yellow h4 {
-            color: #F1C37F;
-        }
-        
-    /* Fonts */
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin-bottom: .5rem;
-            font-family: inherit;
-            font-weight: 500;
-            line-height: 1.1;
-            color: inherit;
-        }
-
-        p,
-        header h2,
-        .inhaler-section ul {
-            font-family: "Libre Baskerville", serif;
-            font-weight: 400;
-            font-size: 1.125em;
-            line-height: 1.875em;
-            color: #464646;
-            -webkit-font-smoothing: antialiased
-        }
-
-    /* Text Styles */
-        b,
-        strong {
-            font-weight: bold
-        }
-
-    /* Links */
-
-        a {
-            color: #464646;
-            cursor: pointer;
-            -webkit-transition: all 0.6s ease;
-            -moz-transition: all 0.6s ease;
-            -ms-transition: all 0.6s ease;
-            -o-transition: all 0.6s ease;
-            transition: all 0.6s ease
-        }
-
-    /* Loading */
-
-        .preload {
-            display: none
-        }
-
-        .loading {
-            width: 100%;
-            text-align: center;
-            padding-top: 2em
-        }
-    /* mess */
-        body {
-            margin: 0;
-            overflow-x: hidden;
-        }
-
-        table {
-            border-collapse: collapse;
-            border-spacing: 0
-        }
-
-        .clearfix:before,
-        .clearfix:after {
-            content: " ";
-            display: table
-        }
-
-        .clearfix:after {
-            clear: both
-        }
-
-        .container {
-            width: 1000px;
-            margin: 0 auto;
-            padding: 0 20px;
-            -webkit-transform: translate3d(0, 0, 0);
-            -moz-transform: translate3d(0, 0, 0);
-            -ms-transform: translate3d(0, 0, 0);
-            -o-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0)
-        }
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
+}
