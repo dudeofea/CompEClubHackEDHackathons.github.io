@@ -3,6 +3,7 @@ $color-blue: #80B1F5;
 $color-green : #94D3A3;
 $color-red: #E06D6F;
 $color-yellow: #F1C37F;
+$color-white: #FFFFFF;
 $color-subtitle: #464646;
 $color-text: #212529;
 
@@ -12,6 +13,7 @@ $color-text: #212529;
 //  the loading failed, the next specified font is loaded)
 $font-family-default:   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,sans-serif;
 $font-family-text:      "Libre Baskerville", serif;
+$font-family-beta:      "Saira Condensed", sans-serif;
 
 //  Mixins (Helper functions for Cross-Browser styles)
 @mixin transform($args) {
@@ -46,7 +48,7 @@ body {
     font-weight: 400;
     line-height: 1.5;
     color: $color-text;
-    background-color: #fff;
+    background-color: $color-white;
     overflow-x: hidden;
 }
 *, ::after, ::before {
@@ -93,7 +95,7 @@ table {
 //  Header Section
 header {
     width: 90%;
-    margin: 25vh auto 20vh;
+    margin: 25vh auto 20vh auto;
     text-align: center;
     //HackED Beta Title
     .prompt {
@@ -102,13 +104,11 @@ header {
     }
     .hacked {
         font-size: 5em;
-        
     }
     .beta {
         font-size: 3em;
         font-weight: 100;
-        font-family: 'Saira Condensed', sans-serif;
-        font-weight: 200;
+        font-family: $font-family-beta;
     }
     .cursor {
         font-size: 5em;
@@ -127,13 +127,13 @@ header {
         font-size: 1.125em;
         font-weight: 400;
         line-height: 1.875em;
-        -webkit-font-smoothing: antialiased;
+        -webkit-font-smoothing: antialiased;    //remove font blurryness
         padding: 0 10%;
         //Line above and below
         &:before, &:after {
             content: "";
             width: 60%;
-            margin: 1.5em 20% 1em;
+            margin: 1.5em 20% 1em 20%;
             height: 0px;
             display: block;
             border: 1px solid;
@@ -150,70 +150,70 @@ header {
     .bubble {
         width: 212px;
         height: 212px;
-        border-radius: 106px;
+        border-radius: 50%;     //50% so that the curve takes half the width ie: a circle
         box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0 1px;
         margin-top: 2em;
         margin-left: -10px;
-        color: #fff !important;
+        color: $color-white;
         text-align: center;
         position: relative;
         float: left;
-        @include transition(opacity 1s ease);
+        //default opacity is 0.4, transition applies when it gets changed
         opacity: 0.4;
+        @include transition(opacity 1s ease);
         &.active {
             //when selected, override opacity: 0.4 and show full opacity
             opacity: 1.0;
         }
-        h3, .bubble h3 {
+        //styles for the text in the bubble
+        h3 {
             font-size: 3em;
+            font-weight: 200;
             line-height: 0.804em;
             margin: 0;
-            font-weight: 200; 
-        }
-        h3, .bubble h3 {
             position: relative;
             top: 50%;
-            @include transform(translateY(-50%));
+            @include transform(translateY(-50%));   //bring the text down halfway
         }
     }
     //background colors for each color
-    .redback {
-        background: $color-red;
-    }
-    .blueback {
-        background: $color-blue;
-    }
-    .greenback {
-        background: $color-green;
-    }
-    .yellowback {
-        background: $color-yellow;
-    }
+    .redback { background: $color-red; }
+    .blueback { background: $color-blue; }
+    .greenback { background: $color-green; }
+    .yellowback { background: $color-yellow; }
+}
+
+// Content styles
+.content {
+    //hide any content overflowing on the x axis (horizontally)
+    overflow-x: hidden;
 }
 
 //  Page Slideshow
+$pages-height: 300px;
 .pages-container {
+    width: 100vw;  //this is one screen width's wide
+    height: $pages-height;  //match the height for all elements
+    margin-top: 10px;
+    margin-left: 0;
+    position: relative;  //only relatively positioned elements will work with overflow / overflow-x: hidden
     top: 0;
-    width: 100vw;
-    height: 90vh;
-    margin-top: 5vh;
-    .wide-pages-container {
-        top: 0px;
-        left: 1000vw;
-        width: 400vw;
-        height: 90vh;
+    .pages-invisible-container {
+        width: 400vw;   //this is 4 screen widths wide, to hold 4 pages
+        height: $pages-height;  //match the height for all elements
+        position: absolute;     //needs to be absolutely positioned for left value to work
+        left: 0;    //this value gets changed when the pages scroll
+        @include transition(left 0.3s ease);    //this animates the change in left
         .page {
-            left: -0vw;
-            //this is the value you gotta change to scroll in JS
-            float: left;
-            position: relative;
-            width: 100vw;
-            height: 100%;
+            width: 100vw;   //each page is one screen width's wide
+            height: $pages-height;  //match the height for all elements
+            box-sizing: border-box;  //ensures the width is never more than 100vw, even with padding/border
+            float: left;    //lines them up horizontally, not vertically
             margin: 0px;
-            overflow-x: scroll;
             padding: 2em 15vw 2em 15vw;
         }
     }
+    //color text styles (only for headings and bold)
     .red {
         b, strong, h1, h2, h3, h4, h5, h6 {
             color: $color-red;
@@ -239,3 +239,8 @@ header {
 //  FAQ Section
 
 //  Sponsors Section
+
+//  Mobile Styles (Tablet)
+
+//  Mobile Styles (Phone)
+

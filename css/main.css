@@ -14,7 +14,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
-  background-color: #fff;
+  background-color: #FFFFFF;
   overflow-x: hidden; }
 
 *, ::after, ::before {
@@ -66,7 +66,7 @@ table {
 
 header {
   width: 90%;
-  margin: 25vh auto 20vh;
+  margin: 25vh auto 20vh auto;
   text-align: center; }
   header .prompt {
     font-size: 5em;
@@ -76,8 +76,7 @@ header {
   header .beta {
     font-size: 3em;
     font-weight: 100;
-    font-family: 'Saira Condensed', sans-serif;
-    font-weight: 200; }
+    font-family: "Saira Condensed", sans-serif; }
   header .cursor {
     font-size: 5em;
     font-weight: 900;
@@ -96,7 +95,7 @@ header {
     header h2:before, header h2:after {
       content: "";
       width: 60%;
-      margin: 1.5em 20% 1em;
+      margin: 1.5em 20% 1em 20%;
       height: 0px;
       display: block;
       border: 1px solid;
@@ -108,28 +107,27 @@ header {
   .bubble-nav .bubble {
     width: 212px;
     height: 212px;
-    border-radius: 106px;
+    border-radius: 50%;
     box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0 1px;
     margin-top: 2em;
     margin-left: -10px;
-    color: #fff !important;
+    color: #FFFFFF;
     text-align: center;
     position: relative;
     float: left;
+    opacity: 0.4;
     -webkit-transition: opacity 1s ease;
     -moz-transition: opacity 1s ease;
     -ms-transition: opacity 1s ease;
     -o-transition: opacity 1s ease;
-    transition: opacity 1s ease;
-    opacity: 0.4; }
+    transition: opacity 1s ease; }
     .bubble-nav .bubble.active {
       opacity: 1.0; }
-    .bubble-nav .bubble h3, .bubble-nav .bubble .bubble h3 {
+    .bubble-nav .bubble h3 {
       font-size: 3em;
+      font-weight: 200;
       line-height: 0.804em;
       margin: 0;
-      font-weight: 200; }
-    .bubble-nav .bubble h3, .bubble-nav .bubble .bubble h3 {
       position: relative;
       top: 50%;
       -webkit-transform: translateY(-50%);
@@ -146,24 +144,32 @@ header {
   .bubble-nav .yellowback {
     background: #F1C37F; }
 
+.content {
+  overflow-x: hidden; }
+
 .pages-container {
-  top: 0;
   width: 100vw;
-  height: 90vh;
-  margin-top: 5vh; }
-  .pages-container .wide-pages-container {
-    top: 0px;
-    left: 1000vw;
+  height: 300px;
+  margin-top: 10px;
+  margin-left: 0;
+  position: relative;
+  top: 0; }
+  .pages-container .pages-invisible-container {
     width: 400vw;
-    height: 90vh; }
-    .pages-container .wide-pages-container .page {
-      left: -0vw;
-      float: left;
-      position: relative;
+    height: 300px;
+    position: absolute;
+    left: 0;
+    -webkit-transition: left 0.3s ease;
+    -moz-transition: left 0.3s ease;
+    -ms-transition: left 0.3s ease;
+    -o-transition: left 0.3s ease;
+    transition: left 0.3s ease; }
+    .pages-container .pages-invisible-container .page {
       width: 100vw;
-      height: 100%;
+      height: 300px;
+      box-sizing: border-box;
+      float: left;
       margin: 0px;
-      overflow-x: scroll;
       padding: 2em 15vw 2em 15vw; }
   .pages-container .red b, .pages-container .red strong, .pages-container .red h1, .pages-container .red h2, .pages-container .red h3, .pages-container .red h4, .pages-container .red h5, .pages-container .red h6 {
     color: #E06D6F; }

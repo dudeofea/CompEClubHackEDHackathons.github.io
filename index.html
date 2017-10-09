@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" style="" class="">
 <head>
-    <!-- Site Data -->
+    <!-- Title you see on your browser tab -->
     <title>HackEDbeta - Register now</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="">
@@ -19,7 +19,7 @@
 
     <!-- Normal favicon declaration (icon in your browser tab) -->
     <link rel="shortcut icon" href="/images/favicon.ico">
-    <!-- Cross-browser favicon declaration -->
+    <!-- Cross-browser favicon declaration (for phones and such) -->
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -35,7 +35,7 @@
     <meta name="twitter:site" content="niceandserious">
     <meta name="twitter:title" content="HackEDbeta - Register now">
     <meta name="twitter:description" content="Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.">
-    <meta name="twitter:creator" content="niceandserious">
+    <meta name="twitter:creator" content="CompE Club">
     <meta name="twitter:image:src" content="http://undertheweather.eu/img/city-globe.png">
     <meta name="twitter:domain" content="http://undertheweather.eu">
 </head>
@@ -49,11 +49,9 @@
             </div>
         </div>
     <![endif]-->
-    
-    <!-- Content -->
+    <!-- Header -->
     <header>
-        <hgroup>
-            <div class="hdr-text">
+            <div>
                 <span class="prompt">></span>
                 <span class="hacked">HackED</span>
                 <span class="beta">BETA</span>
@@ -62,27 +60,27 @@
             <h2>
                 Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit. Lorem Ipsum Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.
             </h2>
-        </hgroup>
     </header>
-    
-    <div class="bubble-nav clearfix">
-        <a class="bubble redback active-title">
-            <h3>Register Now</h3>
-        </a>
-        <a class="bubble blueback">
-            <h3>Enter + Mentor</h3>
-        </a>
-        <a class="bubble greenback">
-            <h3>Be a Mentor</h3>
-        </a>
-        <a class="bubble yellowback">
-            <h3>Sponsor Us</h3>
-        </a>
-    </div>
-
-    <div class="content"> <!-- For colours - see css "theme elements"-->
+    <!-- Page Content (everything but header / footer) -->
+    <div class="content">
+        <!-- Bubble buttons -->
+        <div class="bubble-nav clearfix">
+            <a class="bubble redback active">
+                <h3>Register Now</h3>
+            </a>
+            <a class="bubble blueback">
+                <h3>Enter + Mentor</h3>
+            </a>
+            <a class="bubble greenback">
+                <h3>Be a Mentor</h3>
+            </a>
+            <a class="bubble yellowback">
+                <h3>Sponsor Us</h3>
+            </a>
+        </div>
+        <!-- Pages slideshow, changes pages according to buttons -->
         <div class="pages-container">
-            <div class="wide-pages-container">
+            <div class="pages-invisible-container clearfix">
                 <div class="page red" id="one">
                     Hackathons are for designing, creating and building awesome projects. <b>HackEDbeta is an open and welcoming event that provides a great learning environment for students of all backgrounds.</b> Whether or not you have programmed before does not matter! We want you here despite your level of experience!
                     <br><br>
@@ -104,7 +102,7 @@
                 </div>
             </div>
         </div>
-
+        <!-- FAQ Section -->
         <div class="container faq">
             <h1>FAQ</h1>
 
@@ -117,18 +115,18 @@
             <!-- https://mhacks.org/ does it very nicely -->
             <!-- our faq https://docs.google.com/document/d/14BEDBf0koFzi4Pdp8MPWNFYWtJOXMwD5Oh_xAMMZ8yY/edit -->
         </div>
-
-        <div class="section sponsors">
+        <!-- Sponsors Section -->
+        <div class="container sponsors">
             <h1>SPONSORS</h1>
             <!-- rows/columns of sponsor logos -->
             <!-- again see mhacks or 2017f.pennapps.com -->
             <!-- current sponsors include ECE and startup edmonton -->
         </div>
-
-        <footer>
-            <!-- contact links, links to social medias addy, etc -->
-            <!-- look at hacked.compeclub.com -->
-        </footer>
     </div>
+    <!-- Footer -->
+    <footer>
+        <!-- contact links, links to social medias addy, etc -->
+        <!-- look at hacked.compeclub.com -->
+    </footer>
 </body>
 </html>

@@ -23,7 +23,7 @@ $(document).ready(function(){
         // when slide changes, animate the slide to the side
         var moveStr = "-" + slideIndex + "00vw";    //this makes a CSS style like -200vw or "-200% view width" to move the page over 2 view widths
         //slide the selected page over, the CSS on the element will animate it for us (see "transition")
-        $(".page").css("left", moveStr);
+        $(".pages-invisible-container").css("left", moveStr);
         
         //reset opacity on all bubbles
         $(".bubble-nav .bubble").removeClass("active");
