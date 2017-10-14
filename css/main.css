@@ -148,6 +148,7 @@ header {
   overflow-x: hidden; }
 
 .pages-container {
+  top: 0;
   width: 100vw;
   height: 90vh;
   margin-top: 5vh;
@@ -180,4 +181,30 @@ header {
   .pages-container .yellow b, .pages-container .yellow strong, .pages-container .yellow h1, .pages-container .yellow h2, .pages-container .yellow h3, .pages-container .yellow h4, .pages-container .yellow h5, .pages-container .yellow h6 {
     color: #F1C37F; }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */
+/* Sponsors Section */
+.sponsors {
+    text-align: center;
+}
+
+.sponsor {
+  margin: 10px;
+  display: inline;
+}
+
+.sponsor img {
+  width: auto; 
+  height: auto; 
+}
+
+.sponsor.gold img {
+    max-width: 47%; 
+}
+
+.sponsor.silver img {
+    max-width: 30%; 
+}
+
+.sponsor.bronze img {
+    max-width: 25%; 
+}
