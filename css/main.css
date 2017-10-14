@@ -135,13 +135,13 @@ header {
       -ms-transform: translateY(-50%);
       -o-transform: translateY(-50%);
       transform: translateY(-50%); }
-  .bubble-nav .redback {
+  .bubble-nav .redback, .red button {
     background: #E06D6F; }
-  .bubble-nav .blueback {
+  .bubble-nav .blueback, .blue button {
     background: #80B1F5; }
-  .bubble-nav .greenback {
+  .bubble-nav .greenback, .green button {
     background: #94D3A3; }
-  .bubble-nav .yellowback {
+  .bubble-nav .yellowback, .yellow button {
     background: #F1C37F; }
 
 .content {
