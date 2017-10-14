@@ -34,6 +34,20 @@ $(document).ready(function(){
         //As you can see this comment is in a function / click event handler within the document ready event function,
         //and "this" here refers to the click event function. $(this) passes "this" to jQuery and it figures out which
         //element called this function (ie: which element was clicked)
+
+        // additionally set the faq background colour as well 
+        if ($(this).hasClass("redback")) {
+            $("#faq").css({ background: "#E06D6F" });
+        }
+        if ($(this).hasClass("blueback")) {
+            $("#faq").css({ background: "#80B1F5" });
+        }
+        if ($(this).hasClass("greenback")) {
+            $("#faq").css({ background: "#94D3A3" });
+        }
+        if ($(this).hasClass("yellowback")) {
+            $("#faq").css({ background: "#F1C37F" });
+        }
     });
     
     //FAQ question accordion

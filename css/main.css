@@ -112,6 +112,8 @@ header {
     -ms-transition: opacity 1s ease;
     -o-transition: opacity 1s ease;
     transition: opacity 1s ease; }
+    .bubble-nav .bubble:hover {
+      opacity: 0.7; }
     .bubble-nav .bubble.active {
       opacity: 1.0; }
     .bubble-nav .bubble h3 {
@@ -169,16 +171,26 @@ header {
   .pages-container .yellow b, .pages-container .yellow strong, .pages-container .yellow h1, .pages-container .yellow h2, .pages-container .yellow h3, .pages-container .yellow h4, .pages-container .yellow h5, .pages-container .yellow h6 {
     color: #F1C37F; }
 
+#faq {
+  padding-top: 7vh; 
+  background: #E06D6F; 
+}
+.faq h1 {
+  text-align: center;
+  margin-bottom: 2em; 
+}
 .faq .question-section {
   width: 50%;
   float: left;
   min-height: 200px; }
+  .faq .question-section > * {
+    margin-left: 15%; }
   .faq .question-section .question {
     font-weight: 500;
     display: inline-block;
     margin: 0;
     padding: 3px 9px;
-    color: #65727e;
+    color: #525252;
     cursor: pointer; }
     .faq .question-section .question:hover, .faq .question-section .question.active {
       background-color: #e6e6e6;
@@ -193,6 +205,8 @@ header {
     -o-transition: max-height 0.5s ease;
     transition: max-height 0.5s ease; }
     .faq .question-section .answer.show {
+      margin: 10px; 
+      font-size: 14px;
       max-height: 300px; }
 
 @media only screen and (max-width: 767px) {
@@ -202,6 +216,7 @@ header {
 
 /* Sponsors Section */
 .sponsors {
+    padding-top: 7vh; 
     text-align: center;
     padding-bottom: 3em; 
     margin: 0 15%;
