@@ -149,8 +149,8 @@ header {
 
 .pages-container {
   width: 100vw;
-  height: 300px;
-  margin-top: 10px;
+  height: 90vh;
+  margin-top: 5vh;
   margin-left: 0;
   position: relative;
   top: 0; }
