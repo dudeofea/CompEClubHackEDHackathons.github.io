@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "hacked beta website",
   "scripts": {
-    "start": "node_modules/node-sass/bin/node-sass css/main.scss -wo css/ --source-map css/ & node_modules/live-server/live-server.js . --ignore=\"main.scss,main.css.map\" --no-browser"
+    "start": "node_modules/node-sass/bin/node-sass css/main.scss -wo css/ --source-map css/ & node_modules/live-server/live-server.js . --ignore=\"main.scss,main.css.map,.git\" --no-browser"
   },
   "repository": {
     "type": "git",
