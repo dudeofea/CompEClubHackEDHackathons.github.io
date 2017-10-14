@@ -181,10 +181,11 @@ header {
   .pages-container .yellow b, .pages-container .yellow strong, .pages-container .yellow h1, .pages-container .yellow h2, .pages-container .yellow h3, .pages-container .yellow h4, .pages-container .yellow h5, .pages-container .yellow h6 {
     color: #F1C37F; }
 
-/*# sourceMappingURL=main.css.map *//*# sourceMappingURL=main.css.map */
 /* Sponsors Section */
 .sponsors {
     text-align: center;
+    padding-bottom: 3em; 
+    margin: 0 15%;
 }
 
 .sponsor {
@@ -206,5 +207,88 @@ header {
 }
 
 .sponsor.bronze img {
-    max-width: 25%; 
+    max-width: 20%; 
 }
+
+/*footer*/
+  #footer {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 5em 10em 3em 10em;
+    width: calc(100% + 2em);
+    margin: 0 0 0em -2em;
+    background-color: #cacaca; 
+  }
+
+    #footer > section {
+      width: 25%; /*calc(50% - 4em);*/
+      /*padding-left: 6em;*/
+      margin: auto; 
+    }
+
+    #footer .copyright {
+      width: 100%;
+      margin: 2.5em 0 2em 0;
+      font-size: 0.8em;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 1280px) {
+
+      #footer {
+        padding: 4em 4em 2em 4em;
+      }
+
+    }
+
+    @media screen and (max-width: 980px) {
+
+      #footer {
+        padding: 4em 3em 2em 3em ;
+        display: block;
+        margin: 0 0 3em 0;
+        width: 100%;
+      }
+
+        #footer > section {
+          width: 40%; 
+          margin: auto; 
+        }
+
+        #footer .copyright {
+          text-align: left;
+        }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+      #footer {
+        padding: 3em 2em 1em 2em ;
+      }
+
+    }
+
+    @media screen and (max-width: 480px) {
+
+      #footer {
+        padding: 3em 1.5em 1em 1.5em ;
+      }
+
+    }
+
+    @media screen and (max-width: 480px) {
+
+      #footer {
+        padding: 2.5em 1em 0.5em 1em ;
+      }
+
+    }
+
+/*# sourceMappingURL=main.css.map */
