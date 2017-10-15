@@ -137,6 +137,22 @@ header {
   .bubble-nav .yellowback, .yellow button {
     background: #F1C37F; }
 
+button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bold; 
+    border-radius: 5px;
+    box-shadow: rgba(70, 70, 70, 0.2) 0 1px 0 1px;
+}
+
+
 .content {
   overflow: hidden; }
 
@@ -162,6 +178,8 @@ header {
       float: left;
       margin: 0px;
       padding: 2em 15vw 2em 15vw; }
+      .pages-container .pages-invisible-container .page p {
+        margin-top: 0px;  }
   .pages-container .red b, .pages-container .red strong, .pages-container .red h1, .pages-container .red h2, .pages-container .red h3, .pages-container .red h4, .pages-container .red h5, .pages-container .red h6 {
     color: #E06D6F; }
   .pages-container .blue b, .pages-container .blue strong, .pages-container .blue h1, .pages-container .blue h2, .pages-container .blue h3, .pages-container .blue h4, .pages-container .blue h5, .pages-container .blue h6 {
@@ -193,7 +211,7 @@ header {
     color: #525252;
     cursor: pointer; }
     .faq .question-section .question:hover, .faq .question-section .question.active {
-      background-color: #e6e6e6;
+      background-color: #F1F1F1;
       color: #212529; }
   .faq .question-section .answer {
     margin: 0;
@@ -233,15 +251,15 @@ header {
 }
 
 .sponsor.gold img {
-    max-width: 47%; 
-}
-
-.sponsor.silver img {
     max-width: 30%; 
 }
 
+.sponsor.silver img {
+    max-width: 22%; 
+}
+
 .sponsor.bronze img {
-    max-width: 20%; 
+    max-width: 15%; 
 }
 
 /*footer*/
@@ -259,6 +277,10 @@ header {
     margin: 0 0 0em -2em;
     background-color: #efefef; 
   }
+
+    #footer a {
+      color: #E06D6F;
+    }
 
     #footer > section {
       width: 25%; /*calc(50% - 4em);*/
