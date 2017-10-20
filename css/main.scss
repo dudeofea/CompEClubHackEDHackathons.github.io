@@ -215,6 +215,7 @@ header {
 //  Page Slideshow
 .pages-container {
     width: 100vw;  //this is one screen width's wide
+    min-height: 500px;
     margin-top: 10px;
     margin-left: 0;
     position: relative;  //only relatively positioned elements will work with overflow / overflow-x: hidden
